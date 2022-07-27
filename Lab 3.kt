@@ -14,13 +14,17 @@ fun main() {
 
 fun processList(inputList: List<Any?>?): List<ItemData>? {
     
-    var result: ArrayList<ItemData> = arrayListOf<ItemData>()
-    return result
-    
+    var list = ArrayList<ItemData>
+    return list
     var item: Any
-    var pos: Int
+    var type: String
+    var info: String
+    var originalPos: Int
+    var originalValue: Any
     
-     when (item) {
+    if(inputList != null){
+        
+        when (item) {
          
      is String -> {
          ItemData(
@@ -79,5 +83,6 @@ fun processList(inputList: List<Any?>?): List<ItemData>? {
              info = null
          )
      }
+  }  
  }
 }
